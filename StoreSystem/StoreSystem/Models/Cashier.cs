@@ -17,6 +17,7 @@
 
             foreach (Product product in cart.Products)
             {
+                //Adding current prodouct price to the subtotal.
                 double currentProductTotalPrice = product.Price * product.Quantity;
                 subtotal += currentProductTotalPrice;
 
@@ -26,6 +27,7 @@
 
                 if (discount > 0)
                 {
+                    //Applying the discount to the product and adding it to the subtotal discount.
                     double totalSumOfDiscount = product.ApplyDiscount(discount);
                     subtotalDiscount += totalSumOfDiscount;
 
